@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: eureka-server
+  config:
+    import: "optional:configserver:"
+  #    import: "configserver:http://localhost:8071"
+  loadbalancer:
+#    Disable ribbon as we will use spring cloud loadbalancer - client side load balancer.
+    ribbon:
+      enabled: false
